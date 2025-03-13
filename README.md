@@ -28,7 +28,7 @@ All of those domains will get the same IP address.
     ```sh
     export CLOUDFLARE_API_TOKEN="your_cloudflare_api_token"
     export CLOUDFLARE_ZONE_ID="your_cloudflare_zone_id"
-    export CLOUDFLARE_DNS_RECORDS="your_dns_record1,your_dns_record2"
+    export CLOUDFLARE_ACCOUNT_ID="your_cloudflare_account_id"
     ```
 4. Setup domains.yaml file with the following format:
     ```yaml
@@ -47,7 +47,7 @@ All of those domains will get the same IP address.
 docker pull ghcr.io/nullservers/dns-updater:latest
 docker run -e CLOUDFLARE_API_TOKEN="your_cloudflare_api_token" \ 
            -e CLOUDFLARE_ZONE_ID="your_cloudflare_zone_id" \
-           -e CLOUDFLARE_DNS_RECORDS="your_dns_record1,your_dns_record2" \
+           -e CLOUDFLARE_ACCOUNT_ID="your_cloudflare_account_id" \
            -v /path/to/domains.yaml:/app/domains.yaml \
            ghcr.io/boveloco/dns-updater:latest
 ```
